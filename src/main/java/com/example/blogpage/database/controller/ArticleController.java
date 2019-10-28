@@ -27,7 +27,7 @@ public class ArticleController {
         ));
         model.addAttribute("articles", new ArrayList<>());
 
-        return "index";
+        return "redirect:/";
     }
 
     @PostMapping("/create")
@@ -37,12 +37,12 @@ public class ArticleController {
         return "index";
     }
 
-    /*@RequestMapping("/")
+    @RequestMapping("/")
     public String index(Model model) {
         model.addAttribute("articles", new ArrayList<>());
 
         return "index";
-    }*/
+    }
     @GetMapping("/findall")
     public String findAll(Model model) {
         model.addAttribute("articles", articleService.findAll());
@@ -61,4 +61,6 @@ public class ArticleController {
 
         return article;
     }
+
+
 }

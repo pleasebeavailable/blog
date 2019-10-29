@@ -1,6 +1,6 @@
-package com.example.blogpage.database.service;
+package com.example.blogpage.backend.service;
 
-import com.example.blogpage.database.model.Article;
+import com.example.blogpage.backend.model.Article;
 
 import java.util.List;
 

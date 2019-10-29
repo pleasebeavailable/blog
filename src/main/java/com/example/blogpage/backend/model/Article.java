@@ -1,7 +1,8 @@
-package com.example.blogpage.database.model;
+package com.example.blogpage.backend.model;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Date;
 
 @Entity
 @Table(name="articles")
@@ -9,10 +10,10 @@ public class Article implements Serializable {
 
     public Article() {}
 
-    public Article(String name, String text, String date, String writer) {
+    public Article(String name, String text, String article_date, String writer) {
         this.name = name;
         this.text = text;
-        this.date = date;
+        this.article_date = article_date;
         this.writer = writer;
     }
 
@@ -26,8 +27,8 @@ public class Article implements Serializable {
     @Column(name="text")
     private String text;
 
-    @Column(name="date")
-    private String date;
+    @Column(name="article_date")
+    private String article_date;
 
     @Column(name="writer")
     private String writer;
@@ -49,11 +50,11 @@ public class Article implements Serializable {
     }
 
     public String getDate() {
-        return date;
+        return article_date;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setDate(String article_date) {
+        this.article_date = article_date;
     }
 
     public String getWriter() {

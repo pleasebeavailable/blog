@@ -1,7 +1,7 @@
-package com.example.blogpage.database.service;
+package com.example.blogpage.backend.service;
 
-import com.example.blogpage.database.model.Article;
-import com.example.blogpage.database.repository.ArticleRepository;
+import com.example.blogpage.backend.model.Article;
+import com.example.blogpage.backend.repository.ArticleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

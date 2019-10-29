@@ -69,37 +69,11 @@
         <a href="/bulkcreate"><button type="submit">Bulk create</button></a>
       </div>
   </div>
-  <div class="container" th:if="${articles.size()!=0}">
-    <h2>List of Articles</h2>
-    <table class="table table-bordered">
-      <tr>
-        <th>Article Name</th>
-        <th>Article Text</th>
-        <th>Date of Publish</th>
-        <th>Article Writer</th>
-      </tr>
 
-      <tr th:each="article : ${articles}">
-        <td th:text="${article.getName()}">Name</td>
-        <td th:text="${article.getText()}">Text</td>
-        <td th:text="${article.getDate()}">Date</td>
-        <td th:text="${article.getWriter()}">Writer</td>
-      </tr>
-    </table>
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a href="/#"><button type="submit">Back</button> </a>
-      </li>
-      <li class="nav-item">
-        <a href="/create"><button type="submit">Add Article</button> </a>
-      </li>
-    </ul>
-
-  </div>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="../static/vendor/jquery/jquery.slim.min.js"></script>
-  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!--<script src="../static/vendor/jquery/jquery.slim.min.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
 
 </body>
 

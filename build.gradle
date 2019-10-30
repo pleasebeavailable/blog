@@ -28,12 +28,6 @@ dependencies {
     }
 }
 
-flyway {
-    url = 'jdbc:postgresql://localhost:5432/practicedb'
-    user = 'postgres'
-    password = 'postgres'
-}
-
 test {
     useJUnitPlatform()
 }

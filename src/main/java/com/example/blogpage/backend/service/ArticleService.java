@@ -14,7 +14,12 @@ public class ArticleService implements IArticleService{
 
     @Override
     public List<Article> findAll() {
-        return articleRepository.findAll();
+        return (List<Article>) articleRepository.findAll();
+    }
+
+    @Override
+    public Article findById(long id) {
+        return articleRepository.findById(id).get();
     }
 
     @Override
@@ -24,6 +29,7 @@ public class ArticleService implements IArticleService{
 
     @Override
     public void save(Article article) {
+
         articleRepository.save(article);
     }
 
@@ -31,4 +37,11 @@ public class ArticleService implements IArticleService{
     public void saveAll(List<Article> articleList) {
         articleRepository.saveAll(articleList);
     }
+
+    @Override
+    public void delete(long id) {
+        articleRepository.delete(articleRepository.findById(id).get());
+    }
+
+
 }

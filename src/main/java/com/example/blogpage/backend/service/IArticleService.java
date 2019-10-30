@@ -8,9 +8,13 @@ public interface IArticleService {
 
     List<Article> findAll();
 
+    Article findById(long id);
+
     Article findByName(String name);
 
     void save(Article article);
 
     void saveAll(List<Article> articleList);
+
+    void delete(long id);
 }

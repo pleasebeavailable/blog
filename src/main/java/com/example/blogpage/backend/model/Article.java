@@ -18,7 +18,7 @@ public class Article implements Serializable {
     }
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
     @Column(name="name")
@@ -32,6 +32,14 @@ public class Article implements Serializable {
 
     @Column(name="writer")
     private String writer;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -49,11 +57,11 @@ public class Article implements Serializable {
         this.text = text;
     }
 
-    public String getDate() {
+    public String getArticle_date() {
         return article_date;
     }
 
-    public void setDate(String article_date) {
+    public void setArticle_date(String article_date) {
         this.article_date = article_date;
     }
 

@@ -62,7 +62,7 @@
         <tr th:each="article : ${articles}">
             <td th:text="${article.getName()}">Name</td>
             <td th:text="${article.getText()}">Text</td>
-            <td th:text="${article.getArticle_date()}">Date</td>
+            <td th:text="${article.getDate()}">Date</td>
             <td th:text="${article.getWriter()}">Writer</td>
             <td><a th:href="'/view/' + ${article.getId()}">View Article</a></td>
             <td><a th:href="'/edit/' + ${article.getId()}">Edit Article</a></td>

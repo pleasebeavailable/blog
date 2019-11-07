@@ -1,5 +1,5 @@
 insert into
-    articles (name, text, article_date, writer)
+    articles (name, text, date, writer)
 values
     ('Article 1', 'This is Article 1', '2019-10-28', 'Ante'),
     ('Article 2', 'This is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2his is Article 2', '2019-10-29', 'Frame'),

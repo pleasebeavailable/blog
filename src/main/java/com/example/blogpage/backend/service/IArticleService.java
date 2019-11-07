@@ -1,20 +1,20 @@
 package com.example.blogpage.backend.service;
 
+import com.example.blogpage.backend.ModelGUI.ArticleGUI;
 import com.example.blogpage.backend.model.Article;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
 public interface IArticleService {
 
-    List<Article> findAll();
+    List<ArticleGUI> getArticles();
 
-    Article findById(long id);
+    ArticleGUI getArticle(long id);
 
-    Article findByName(String name);
+    ArticleGUI createArticle(Article article);
 
-    void save(Article article);
+    ArticleGUI updateArticle(long id, Article article);
 
-    void saveAll(List<Article> articleList);
-
-    void delete(long id);
+    ResponseEntity<Object> delete(long id);
 }

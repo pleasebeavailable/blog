@@ -1,19 +1,22 @@
 package com.example.blogpage.backend.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import org.hibernate.annotations.Fetch;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Table(name="articles")
-public class Article implements Serializable {
+public class Article {
 
     public Article() {}
 
-    public Article(String name, String text, String article_date, String writer) {
+    public Article(String name, String text, String date, String writer) {
         this.name = name;
         this.text = text;
-        this.article_date = article_date;
+        this.date = date;
         this.writer = writer;
     }
 
@@ -27,11 +30,16 @@ public class Article implements Serializable {
     @Column(name="text")
     private String text;
 
-    @Column(name="article_date")
-    private String article_date;
+    @Column(name="date")
+    private String date;
 
     @Column(name="writer")
     private String writer;
+
+//    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+//    @JoinColumn(name = "user_id", nullable = false)
+//    @JsonIgnore
+//    private User user;
 
     public long getId() {
         return id;
@@ -57,12 +65,12 @@ public class Article implements Serializable {
         this.text = text;
     }
 
-    public String getArticle_date() {
-        return article_date;
+    public String getDate() {
+        return date;
     }
 
-    public void setArticle_date(String article_date) {
-        this.article_date = article_date;
+    public void setDate(String date) {
+        this.date = date;
     }
 
     public String getWriter() {
@@ -72,4 +80,12 @@ public class Article implements Serializable {
     public void setWriter(String writer) {
         this.writer = writer;
     }
+
+//    public User getUser() {
+//        return user;
+//    }
+
+//    public void setUser(User user) {
+//        this.user = user;
+//    }
 }

@@ -1,8 +1,6 @@
-package com.example.blogpage.controller;
+package com.example.blogpage.web.controller;
 
-import com.example.blogpage.backend.controller.ArticleController;
 import org.junit.Before;
-import org.junit.Test;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 

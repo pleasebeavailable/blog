@@ -1,11 +1,9 @@
-package com.example.blogpage.backend.model;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.hibernate.annotations.Fetch;
+package com.example.blogpage.repository.model;
 
 import javax.persistence.*;
-import java.io.Serializable;
-import java.util.Date;
+import java.util.ArrayList;
+import java.util.List;
+
 
 @Entity
 @Table(name="articles")
@@ -36,10 +34,13 @@ public class Article {
     @Column(name="writer")
     private String writer;
 
-//    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-//    @JoinColumn(name = "user_id", nullable = false)
-//    @JsonIgnore
-//    private User user;
+    @OneToMany(mappedBy = "article")
+    private List<Comment> comments = new ArrayList<Comment>();
+
+    public void addComment(Comment comment) {
+        comments.add(comment);
+    }
+
 
     public long getId() {
         return id;
@@ -81,11 +82,11 @@ public class Article {
         this.writer = writer;
     }
 
-//    public User getUser() {
-//        return user;
-//    }
+    public List<Comment> getComments() {
+        return comments;
+    }
 
-//    public void setUser(User user) {
-//        this.user = user;
-//    }
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
+    }
 }

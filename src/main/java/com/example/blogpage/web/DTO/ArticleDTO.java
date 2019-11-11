@@ -1,6 +1,8 @@
-package com.example.blogpage.backend.ModelGUI;
+package com.example.blogpage.web.DTO;
 
-public class ArticleGUI {
+import java.io.Serializable;
+
+public class ArticleDTO implements Serializable {
 
     private long id;
 
@@ -12,22 +14,23 @@ public class ArticleGUI {
 
     private String writer;
 
-    public ArticleGUI() {}
+    public ArticleDTO() {
+    }
 
-    public ArticleGUI(long id, String name, String text, String date, String writer) {
-        this.id = id;
+
+    public ArticleDTO(String name, String text, String date, String writer) {
         this.name = name;
         this.text = text;
         this.date = date;
         this.writer = writer;
     }
 
-    public long getId() {
-        return id;
-    }
-
     public void setId(long id) {
         this.id = id;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public String getName() {
